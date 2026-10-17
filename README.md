@@ -82,7 +82,7 @@ The paper uses Base B. Raw REMCA data are public; processed bases and the row-le
 
 Environment: Python ≥3.10 (tested with 3.12) and a TeX Live installation with `pdflatex`, `booktabs`, `natbib`, `siunitx`, `lineno` and `authblk`.
 
-See [`docs/REPRODUCING.md`](docs/REPRODUCING.md) for the full protocol and expected outputs, and [`docs/UNCERTAINTY.md`](docs/UNCERTAINTY.md) for the bootstrap and post-hoc analyses.
+See [`docs/REPRODUCING.md`](docs/REPRODUCING.md) for the full protocol and expected outputs, and [`docs/UNCERTAINTY.md`](docs/UNCERTAINTY.md) for the bootstrap and post-hoc analyses. Editorial decisions are summarised in [`docs/EDITORIAL_REVIEW_REDIN.md`](docs/EDITORIAL_REVIEW_REDIN.md).
 
 ## Data and code availability
 
