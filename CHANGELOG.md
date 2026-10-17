@@ -5,6 +5,13 @@ The manuscript version is tracked separately in `paper/`.
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-10-17
+
+### Changed
+- Editorial pass: title block, abstract/resumen, methods/results prose, table notes, figure fonts and English legend, IEEE citation order, CRediT roles.
+- Regenerated the three paper figures (2400 px, optimized PNG, larger fonts).
+- Added `docs/EDITORIAL_REVIEW_REDIN.md`.
+
 ### Added
 - Initial public reproducibility package.
 - Conservative preprocessing pipeline (Bases A/B/C) with row-level audit.

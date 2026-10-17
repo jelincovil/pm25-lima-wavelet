@@ -29,6 +29,15 @@ import pandas as pd
 import seaborn as sns
 from PIL import Image
 
+plt.rcParams.update({
+    "font.size": 16,
+    "axes.titlesize": 17,
+    "axes.labelsize": 16,
+    "xtick.labelsize": 13,
+    "ytick.labelsize": 13,
+    "legend.fontsize": 11,
+})
+
 _setup = Path(__file__).resolve().parent / "00_setup_paths.py"
 spec = importlib.util.spec_from_file_location("setup_paths", _setup)
 setup_paths = importlib.util.module_from_spec(spec)
@@ -52,7 +61,7 @@ def load_series(path: Path, stations):
 def figure1_preprocessing(paths, stations, n_ausentes, n_outliers, base_b):
     """Panel A: multi-station series; Panel B: NA vs outlier bars."""
     fig, axes = plt.subplots(
-        2, 1, figsize=(12, 8), gridspec_kw={"height_ratios": [2.2, 1.0]}
+        2, 1, figsize=(10, 7.5), gridspec_kw={"height_ratios": [2.2, 1.0]}
     )
     ax = axes[0]
     colors = {"SBJ": "#1f77b4", "STA": "#d62728", "VMT": "#2ca02c", "SJL": "#9467bd", "SMP": "#ff7f0e"}
@@ -60,7 +69,7 @@ def figure1_preprocessing(paths, stations, n_ausentes, n_outliers, base_b):
         ax.plot(base_b.index, base_b[st], lw=0.35, color=colors.get(st, "gray"), label=st, alpha=0.9)
     ax.set_ylabel("PM2.5 (µg/m³)")
     ax.set_title("A. Hourly PM2.5 after conservative preprocessing (n = {:,})".format(len(base_b)))
-    ax.legend(ncol=5, fontsize=8, loc="upper right")
+    ax.legend(ncol=5, fontsize=11, loc="upper right")
     ax.grid(axis="y", alpha=0.3)
 
     axb = axes[1]
@@ -68,18 +77,18 @@ def figure1_preprocessing(paths, stations, n_ausentes, n_outliers, base_b):
     w = 0.38
     nas = [int(n_ausentes[st]) for st in stations]
     outs = [int(n_outliers[st]) for st in stations]
-    bars1 = axb.bar(x - w / 2, nas, w, color="#4DB6AC", edgecolor="black", lw=0.4, label="NAs imputed")
-    bars2 = axb.bar(x + w / 2, outs, w, color="#E57373", edgecolor="black", lw=0.4, label="Outliers replaced (conservative)")
+    bars1 = axb.bar(x - w / 2, nas, w, color="#4DB6AC", edgecolor="black", lw=0.4, label="Missing values imputed")
+    bars2 = axb.bar(x + w / 2, outs, w, color="#E57373", edgecolor="black", lw=0.4, label="Values replaced (conservative)")
     axb.set_xticks(x)
     axb.set_xticklabels(stations)
     axb.set_ylabel("Count")
-    axb.set_title("B. Points modified per station")
-    axb.legend(fontsize=8)
+    axb.set_title("B. Values modified per station")
+    axb.legend(fontsize=10)
     axb.grid(axis="y", alpha=0.3)
     # annotate means of replaced points if we have diagnostics
     for i, st in enumerate(stations):
-        axb.text(x[i] - w / 2, nas[i], str(nas[i]), ha="center", va="bottom", fontsize=7)
-        axb.text(x[i] + w / 2, outs[i], str(outs[i]), ha="center", va="bottom", fontsize=7)
+        axb.text(x[i] - w / 2, nas[i], str(nas[i]), ha="center", va="bottom", fontsize=9)
+        axb.text(x[i] + w / 2, outs[i], str(outs[i]), ha="center", va="bottom", fontsize=9)
 
     fig.tight_layout()
     out = paths["paper_figures"] / "figure_1.png"
@@ -97,7 +106,7 @@ def figure_diurnal_box(paths, stations, base_b):
     df["hour"] = df.index.hour
     diurnal = df.groupby("hour")[stations].mean()
 
-    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4.5))
     ax = axes[0]
     colors = {"SBJ": "#1f77b4", "STA": "#d62728", "VMT": "#2ca02c", "SJL": "#9467bd", "SMP": "#ff7f0e"}
     for st in stations:
@@ -111,7 +120,7 @@ def figure_diurnal_box(paths, stations, base_b):
     ax.set_ylabel("Mean PM2.5 (µg/m³)")
     ax.set_title("A. Mean diurnal cycle")
     ax.set_xticks(range(0, 24, 2))
-    ax.legend(fontsize=7, ncol=2)
+    ax.legend(fontsize=10, ncol=2)
     ax.grid(alpha=0.3)
 
     axb = axes[1]
@@ -123,7 +132,7 @@ def figure_diurnal_box(paths, stations, base_b):
     axb.axhline(50, color="red", ls="--", lw=1.2, label="WHO 50 µg/m³")
     axb.set_ylabel("PM2.5 (µg/m³)")
     axb.set_title("B. Hourly distributions by station")
-    axb.legend(fontsize=8)
+    axb.legend(fontsize=10)
     axb.grid(axis="y", alpha=0.3)
 
     fig.suptitle("Diurnal cycle and distributional properties (Base B conservative)", y=1.02)
@@ -187,7 +196,13 @@ def table2_from_inference(inf_path: Path):
     ]
     for _, row in t.iterrows():
         per = f"{int(row['period_low_h'])}--{int(row['period_high_h'])}"
-        method = str(row["selected_method"]).replace("_", r"\_")
+        method_map = {
+            "Permutacao-blocos": "Block perm.",
+            "ANOVA-RM": "ANOVA-RM",
+            "ANOVA-RM-GG": "ANOVA-RM (GG)",
+            "Friedman": "Friedman",
+        }
+        method = method_map.get(str(row["selected_method"]), str(row["selected_method"])).replace("_", r"\_")
         p = row["raw_p"]
         pb = row["p_bonferroni"]
         p_s = f"{p:.2e}" if p < 0.001 else f"{p:.4f}"

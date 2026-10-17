@@ -13,7 +13,7 @@ def test_paper_figures_exist_and_are_small_enough():
         assert path.stat().st_size <= 500 * 1024, f"{name} exceeds 500 KB"
         with Image.open(path) as im:
             assert im.width >= 1000 and im.height >= 1000
-            assert im.mode in {"RGB", "RGBA", "L"}
+            assert im.mode in {"RGB", "RGBA", "L", "P"}
 
 
 def test_no_stale_figure_copies_outside_figures_dir():

@@ -10,6 +10,28 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from PIL import Image
+
+
+def _optimize_png(path: Path) -> None:
+    """Resize to a print-safe width and save an optimized palette PNG."""
+    with Image.open(path) as im:
+        im = im.convert("RGB")
+        if im.width > 2400:
+            height = round(im.height * 2400 / im.width)
+            im = im.resize((2400, height), Image.LANCZOS)
+        im = im.quantize(colors=256, method=Image.MEDIANCUT)
+        im.save(path, optimize=True)
+
+
+plt.rcParams.update({
+    "font.size": 16,
+    "axes.titlesize": 17,
+    "axes.labelsize": 16,
+    "xtick.labelsize": 13,
+    "ytick.labelsize": 13,
+    "legend.fontsize": 11,
+})
 from matplotlib.patches import Patch
 import numpy as np
 import pandas as pd
@@ -374,6 +396,10 @@ def main():
         "ANOVA-RM": "#4c72b0", "ANOVA-RM-GG": "#55a868",
         "Friedman": "#c44e52", "Permutacao-blocos": "#8172b2",
     }
+    method_labels = {
+        "ANOVA-RM": "ANOVA-RM", "ANOVA-RM-GG": "ANOVA-RM (GG)",
+        "Friedman": "Friedman", "Permutacao-blocos": "Block permutation",
+    }
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 10))
     for st in stations:
         ax1.plot(energy.index, np.log10(energy[st]), marker="o", lw=2, ms=5, color=colors_station[st], label=st)
@@ -386,7 +412,7 @@ def main():
     ax1.set_ylabel(r"$\log_{10}(E_j)$")
     ax1.set_xticks(range(1, j_desc + 1))
     ax1.grid(axis="y", alpha=0.3)
-    ax1.legend(ncol=3, fontsize=8, loc="upper left")
+    ax1.legend(ncol=3, fontsize=11, loc="upper left")
 
     x = results["scale_j"].to_numpy()
     minus_log_p = -np.log10(np.clip(results["raw_p"].to_numpy(), 1e-300, 1))
@@ -408,17 +434,18 @@ def main():
     ax2.grid(axis="y", alpha=0.3)
     used = list(results["selected_method"].unique())
     handles = [
-        Patch(facecolor=colors_method[mth], edgecolor="black", label=mth)
+        Patch(facecolor=colors_method[mth], edgecolor="black", label=method_labels.get(mth, mth))
         for mth in used if mth in colors_method
     ]
     # threshold lines already labeled via axhline label=
     line_handles, line_labels = ax2.get_legend_handles_labels()
-    ax2.legend(handles=handles + line_handles, labels=[h.get_label() for h in handles] + line_labels, fontsize=8, loc="upper right")
+    ax2.legend(handles=handles + line_handles, labels=[h.get_label() for h in handles] + line_labels, fontsize=11, loc="upper right")
     fig.tight_layout()
     for ext in ("png", "pdf"):
         fig.savefig(paths["figures"] / f"figure3_assumption_checked.{ext}", dpi=300, bbox_inches="tight")
     # paper-ready copy
     fig.savefig(paths["paper_figures"] / "figure_2.png", dpi=300, bbox_inches="tight")  # paper Fig.3 uses figure_2.png
+    _optimize_png(paths["paper_figures"] / "figure_2.png")
     plt.close(fig)
 
     # QQ plots

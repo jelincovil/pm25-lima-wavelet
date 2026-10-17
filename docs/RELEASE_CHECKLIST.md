@@ -1,7 +1,7 @@
 # Release checklist (GitHub + Zenodo)
 
 **Status 2026-10-17:** the repository is public at
-<https://github.com/jelincovil/pm25-lima-wavelet> and release `v1.0.0` exists.
+<https://github.com/jelincovil/pm25-lima-wavelet> and release `v1.0.1` exists.
 Steps 1–4 are complete; the Zenodo DOI (step 5) is pending an account/token.
 Complete the remaining checks before submission.
 
