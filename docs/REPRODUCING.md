@@ -55,6 +55,7 @@ Order and outputs:
 | 3 | `analysis/03_inference_adaptive.py` | `results/inference/adaptive_results.csv`; Fig. 3 |
 | 4 | `analysis/04_sensitivity.py` | `results/sensitivity/`; `docs/SENSITIVITY.md` |
 | 5 | `analysis/05_figures_tables.py` | paper figures, Tables 1–2, `f6_paper_numbers.json`, registry update |
+| 6 | `analysis/06_uncertainty_posthoc.py` | bootstrap CIs, pairwise post-hoc table |
 
 Table 2 in the manuscript is typeset from `results/inference/adaptive_results.csv`; the `results/tables/table2_scale_tests.tex` fragment is a raw generator output and is not the final table. The full run uses `N_PERM = 9,999` and seed `2026`. Runtime depends on the
 machine; the permutation step is the slowest. The scripts write to the
@@ -73,7 +74,7 @@ After `make analysis`, the following should hold:
 - Formal scales `j = 1…9`; `j ≥ 10` not eligible.
 - Bonferroni threshold `0.05/9 ≈ 0.00556`.
 
-These are encoded in `tests/`.
+These are encoded in `tests/`. Uncertainty outputs are documented in `docs/UNCERTAINTY.md`.
 
 ## 5. Determinism and platform notes
 

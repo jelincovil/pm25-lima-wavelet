@@ -13,7 +13,9 @@ The manuscript version is tracked separately in `paper/`.
 - A/B/C sensitivity analysis.
 - Manuscript source, compiled PDF and final figures.
 - Claims registry, regression tests, PDF checks and CI.
+- Block-bootstrap CIs for Kendall W and diurnal energy fractions.
+- Secondary paired Wilcoxon post-hoc tests with Holm correction within scale.
 
-## [0.1.0] - 2026-10-17
+## [1.0.0] - 2026-10-17
 
 - Submission candidate prepared for REDIN.

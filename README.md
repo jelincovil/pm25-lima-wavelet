@@ -15,7 +15,8 @@ Key findings (Base B, conservative preprocessing):
 - Inter-station differences are Bonferroni-significant at wavelet scales `j = 1–7` (about 2 h to 11 days).
 - The largest rank-based effect is in the diurnal band `j = 4` (16–32 h), Kendall `W = 0.69`.
 - `j = 8` is nominally significant but does not survive Bonferroni; `j = 9` shows no evidence of difference, and `j ≥ 10` is not formally testable with this record length.
-- Diurnal energy is 20.4% at San Juan de Lurigancho versus 12.4% at San Borja.
+- Diurnal energy is 20.4% (95% CI 17.4–22.9) at San Juan de Lurigancho versus 12.4% (10.3–16.5) at San Borja.
+- At `j = 4`, 8 of 10 secondary pairwise tests differ; SJL–STA and SBJ–SMP do not.
 - Conservative cleaning replaces 0.68–1.08% of hours, compared with 8–13% under STL+3×IQR.
 
 ## Repository layout
@@ -37,7 +38,7 @@ scripts/               Claim, PDF and style checks
 ## Quick start
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/jelincovil/pm25-lima-wavelet.git
 cd pm25-lima-wavelet
 
 python3 -m venv .venv
@@ -77,7 +78,7 @@ The paper uses Base B. Raw REMCA data are public; processed bases and the row-le
 
 Environment: Python ≥3.10 (tested with 3.12) and a TeX Live installation with `pdflatex`, `booktabs`, `natbib`, `siunitx`, `lineno` and `authblk`.
 
-See [`docs/REPRODUCING.md`](docs/REPRODUCING.md) for the full protocol and expected outputs.
+See [`docs/REPRODUCING.md`](docs/REPRODUCING.md) for the full protocol and expected outputs, and [`docs/UNCERTAINTY.md`](docs/UNCERTAINTY.md) for the bootstrap and post-hoc analyses.
 
 ## Data and code availability
 

@@ -19,3 +19,7 @@ city_trough,Results 3.1,23.8,23.8081,ug/m3,results/tables/f6_paper_numbers.json,
 corr_min,Results 3.1,0.54,0.5414,Pearson r,results/tables/station_pearson_corr.csv,analysis/05_figures_tables.py,verified,2026-10-17
 corr_max,Results 3.1,0.86,0.8560,Pearson r,results/tables/station_pearson_corr.csv,analysis/05_figures_tables.py,verified,2026-10-17
 n_blocks_short,Results 3.3,19--20,19-20,blocks,results/inference/adaptive_results.csv,analysis/03_inference_adaptive.py,verified,2026-10-17
+j4_effect_ci,Results 3.3,0.60--0.80,0.596-0.802,95% CI,results/inference/effect_ci.csv,analysis/06_uncertainty_posthoc.py,verified,2026-10-17
+diurnal_SJL_ci,Results 3.4,17.4--22.9,17.43-22.94,95% CI percent,results/tables/diurnal_energy_fraction_ci.csv,analysis/06_uncertainty_posthoc.py,verified,2026-10-17
+diurnal_SBJ_ci,Results 3.4,10.3--16.5,10.34-16.50,95% CI percent,results/tables/diurnal_energy_fraction_ci.csv,analysis/06_uncertainty_posthoc.py,verified,2026-10-17
+posthoc_j4,Results 3.3,eight of ten,8/10,pairs,results/inference/posthoc_pairwise.csv,analysis/06_uncertainty_posthoc.py,verified,2026-10-17

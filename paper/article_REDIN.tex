@@ -297,14 +297,14 @@ $j$ & Period (h) & Method & $p$ & $p_{\mathrm{Bonf}}$ & Sig. & Effect \\
 \label{fig:multiscale}
 \end{figure}
 
-Bonferroni-significant differences appear at $j=1$--$7$ (about 2~h to $\sim$11 days). For block-permutation scales, the smallest attainable $p$-value with $N_{\mathrm{perm}}=9{,}999$ is $1/(9{,}999+1)=1.0\times10^{-4}$; the table reports this value explicitly rather than as an open inequality. The largest rank-based effect is at $j=4$ ($W=0.69$). At $j=8$ the Friedman $p=0.0079$ does not survive Bonferroni; at $j=9$ there is no evidence of difference ($p=0.185$). We do not interpret $j\ge 10$ as equality of stations: those scales lack enough central coefficients for reliable formal tests and are influenced by boundary padding.
+Bonferroni-significant differences appear at $j=1$--$7$ (about 2~h to $\sim$11 days). For block-permutation scales, the smallest attainable $p$-value with $N_{\mathrm{perm}}=9{,}999$ is $1/(9{,}999+1)=1.0\times10^{-4}$; the table reports this value explicitly rather than as an open inequality. The largest rank-based effect is at $j=4$ ($W=0.69$; 95\% block-bootstrap CI 0.60--0.80). At $j=8$ the Friedman $p=0.0079$ does not survive Bonferroni; at $j=9$ there is no evidence of difference ($p=0.185$). We do not interpret $j\ge 10$ as equality of stations: those scales lack enough central coefficients for reliable formal tests and are influenced by boundary padding. Secondary pairwise Wilcoxon tests (Holm within scale) at $j=1$--$7$ separated the high-contrast corridor stations from the residential sites in most pairs; at $j=4$, eight of ten pairs differed, the exceptions being SJL--STA and SBJ--SMP. These tests are descriptive and do not replace the omnibus Bonferroni decision; pairwise results at $j=8$--$9$ are reported for completeness but not interpreted.
 
 Relative to coefficient-wise Kruskal--Wallis analyses that report extreme $p$-values under independence assumptions, the present $p$-values are more conservative, but the scientific ordering---strong short-scale heterogeneity, weaker intermediate scales, no formal evidence at the longest tested band---is retained. Temporal aggregation produced 19--20 blocks at $j=1$--$7$, 40 at $j=8$, and 20 at $j=9$. These counts are adequate for the omnibus tests but limited for long-scale equivalence claims; the non-significant $j=9$ result is therefore reported as absence of evidence, not as evidence of absence. Sensitivity: Bases A and B share identical Bonferroni decisions; Base C (aggressive) additionally flags $j=8$, illustrating how heavy peak suppression can alter intermediate-scale inference.
 
 \subsection{Diurnal band energy allocation}
 \label{subsec:diurnal_energy}
 
-The diurnal band concentrates the strongest rank effect and a clear spatial gradient of energy share (SJL 20.4\% versus SBJ 12.4\%), consistent with larger morning peaks at SJL/STA (Fig.~\ref{fig:diurnal}A) and denser traffic corridors. Aggressive cleaning reduces diurnal energy especially at SBJ (to 7.8\%), confirming that peak suppression can shrink the very contrast of engineering interest.
+The diurnal band concentrates the strongest rank effect and a clear spatial gradient of energy share (SJL 20.4\%, 95\% CI 17.4--22.9, versus SBJ 12.4\%, 95\% CI 10.3--16.5; the intervals do not overlap), consistent with larger morning peaks at SJL/STA (Fig.~\ref{fig:diurnal}A) and denser traffic corridors. Aggressive cleaning reduces diurnal energy especially at SBJ (to 7.8\%), confirming that peak suppression can shrink the very contrast of engineering interest.
 
 \subsection{Interpretation of scale-specific heterogeneity}
 
@@ -365,7 +365,9 @@ G.R.~Quispe-Mendoza: Supervision, Investigation, Writing---review \& editing.
 
 \section*{Data Availability Statement}
 Hourly PM2.5 data are publicly available from SENAMHI REMCA (\url{https://www.senamhi.gob.pe}).
-Processed bases, the row-level preprocessing audit, analysis scripts, configuration files and figure sources are available from the corresponding author; the reproducibility package will be archived in a public repository upon acceptance.
+Processed bases, the row-level preprocessing audit, analysis scripts, configuration files and figure sources are available from the corresponding author and at \url{https://github.com/jelincovil/pm25-lima-wavelet}; the release will be archived with a DOI upon acceptance.
+
+\noindent Correspondence: Henry S. Aquino-Mosquera (\url{henry.aquino@ciencia.org.pe}).
 
 % =============================================================================
 \begin{thebibliography}{99}

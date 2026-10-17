@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pm25-lima-wavelet"
-version = "0.1.0"
+version = "1.0.0"
 description = "Reproducible wavelet multiscale analysis of the Lima PM2.5 monitoring network"
 readme = "README.md"
 requires-python = ">=3.10"

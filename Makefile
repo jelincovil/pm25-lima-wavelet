@@ -40,6 +40,7 @@ analysis:
 	$(PYTHON) analysis/03_inference_adaptive.py
 	$(PYTHON) analysis/04_sensitivity.py
 	$(PYTHON) analysis/05_figures_tables.py
+	$(PYTHON) analysis/06_uncertainty_posthoc.py
 
 verify: test claims pdfcheck
 

@@ -17,6 +17,7 @@ reproducibility choices that a reviewer is likely to question.
 | D10 | No claim of seasonal equality | `j ≥ 10` is not formally testable; `j = 9` has low power | Claim “indistinguishable at seasonal scales” | Wording is “no evidence”, not “no difference” |
 | D11 | Decision matrix is conditional | Five stations, 14 months, no meteorology/source apportionment | Universal network-design rule | Recommendations are engineering implications, not causal laws |
 | D12 | Independent public repository | Avoid exposing the parent project and unrelated documents | Publish the parent repository | Curated package, clean history, MIT/CC BY licensing |
+| D13 | Bootstrap CIs and pairwise post-hoc are secondary | They quantify uncertainty and identify which stations differ, without changing the primary Bonferroni family | Add them to the primary family; omit uncertainty | Reported separately; not used to rescue non-significant scales |
 
 ## Reproducibility decisions
 

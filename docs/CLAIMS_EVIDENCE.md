@@ -16,7 +16,10 @@ command. The machine-readable version is `docs/NUMBER_REGISTRY.csv`.
 | C9 | Diurnal energy 20.4% (SJL) vs 12.4% (SBJ) | Observed | `results/tables/diurnal_energy_fraction_j4_baseB.csv` | Verified |
 | C10 | A≡B in Bonferroni decisions; C flags `j = 8` | Observed | `results/sensitivity/significance_matrix_bonferroni.csv`, `docs/SENSITIVITY.md` | Verified |
 | C11 | Blocks: 19–20 at `j = 1–7`, 40 at `j = 8`, 20 at `j = 9` | Observed | `results/inference/adaptive_results.csv` | Verified |
-| C12 | Decision matrix: prioritise `j = 1–4` in SJL/STA; do not infer multi-week redundancy | Recommendation | C6–C11, Table 3 | Derived; conditional on the five-station, 14-month record |
+| C13 | Block-bootstrap 95% CI for `W` at `j = 4` is 0.60–0.80 | Observed | `results/inference/effect_ci.csv` | Verified |
+| C14 | Diurnal energy 20.4% [17.4–22.9] (SJL) vs 12.4% [10.3–16.5] (SBJ); intervals do not overlap | Observed | `results/tables/diurnal_energy_fraction_ci.csv` | Verified |
+| C15 | Secondary pairwise tests: at `j = 4`, 8/10 pairs differ; exceptions SJL–STA and SBJ–SMP | Secondary | `results/inference/posthoc_pairwise.csv` | Verified, not a primary claim |
+| C12 | Decision matrix: prioritise `j = 1–4` in SJL/STA; do not infer multi-week redundancy | Recommendation | C6–C15, Table 3 | Derived; conditional on the five-station, 14-month record |
 
 ## Rules
 
