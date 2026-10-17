@@ -35,7 +35,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install PDF checker dependency
-        run: pip install PyMuPDF==1.28.2
+        run: pip install PyMuPDF==1.28.2 Pillow==13.0.0
       - name: Check figure order and sizes
         run: python scripts/check_pdf.py
       - name: Upload PDF
