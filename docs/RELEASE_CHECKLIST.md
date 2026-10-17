@@ -1,7 +1,7 @@
 # Release checklist (GitHub + Zenodo)
 
 **Status 2026-10-17:** the repository is public at
-<https://github.com/jelincovil/pm25-lima-wavelet> and release `v1.0.1` exists.
+<https://github.com/jelincovil/pm25-lima-wavelet> and release `v1.0.2` exists.
 Steps 1–4 are complete; the Zenodo DOI (step 5) is pending an account/token.
 Complete the remaining checks before submission.
 
@@ -49,7 +49,7 @@ Release contains `pm25-lima-wavelet-release.zip`.
    - `paper/article_REDIN.tex` Data Availability statement;
    - `paper/SUBMISSION_PACKAGE_REDIN.md`.
 4. Recompile the PDF (`make paper`) and re-run `make verify`.
-5. Commit the DOI update and tag `v1.0.1` if the PDF changes.
+5. Commit the DOI update and tag `v1.0.2` if the PDF changes.
 
 ## 6. If the journal requires anonymous review
 

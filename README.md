@@ -7,7 +7,7 @@ Reproducible wavelet multiscale analysis of hourly PM2.5 at five REMCA stations 
 **Status:** submission candidate. Code, processed data, audit trail, figures and LaTeX source are released for review and reuse.
 
 **Repository:** <https://github.com/jelincovil/pm25-lima-wavelet>  
-**Release:** <https://github.com/jelincovil/pm25-lima-wavelet/releases/tag/v1.0.1>  
+**Release:** <https://github.com/jelincovil/pm25-lima-wavelet/releases/tag/v1.0.2>  
 **DOI:** to be assigned via Zenodo.
 
 ## What this repository contains

@@ -407,12 +407,13 @@ def main():
     ax1.axvspan(5.5, 8.5, alpha=0.10, color="lightgreen", label="synoptic")
     if j_desc > j_seguro:
         ax1.axvspan(j_seguro + 0.5, j_desc + 0.5, color="gray", alpha=0.18, label="above useful DWT")
-    ax1.set_title("A. Multiscale energy profiles", fontweight="bold")
+    ax1.set_title("A. Multiscale energy profiles", fontweight="bold", pad=76)
     ax1.set_xlabel("Wavelet detail scale j")
     ax1.set_ylabel(r"$\log_{10}(E_j)$")
     ax1.set_xticks(range(1, j_desc + 1))
     ax1.grid(axis="y", alpha=0.3)
-    ax1.legend(ncol=3, fontsize=11, loc="upper left")
+    ax1.legend(ncol=4, fontsize=11, loc="lower center", bbox_to_anchor=(0.5, 1.01),
+               frameon=False, handlelength=1.5, columnspacing=1.0, handletextpad=0.4)
 
     x = results["scale_j"].to_numpy()
     minus_log_p = -np.log10(np.clip(results["raw_p"].to_numpy(), 1e-300, 1))

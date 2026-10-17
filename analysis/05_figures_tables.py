@@ -68,8 +68,9 @@ def figure1_preprocessing(paths, stations, n_ausentes, n_outliers, base_b):
     for st in stations:
         ax.plot(base_b.index, base_b[st], lw=0.35, color=colors.get(st, "gray"), label=st, alpha=0.9)
     ax.set_ylabel("PM2.5 (µg/m³)")
-    ax.set_title("A. Hourly PM2.5 after conservative preprocessing (n = {:,})".format(len(base_b)))
-    ax.legend(ncol=5, fontsize=11, loc="upper right")
+    ax.set_title("A. Hourly PM2.5 after conservative preprocessing (n = {:,})".format(len(base_b)), pad=30)
+    ax.legend(ncol=5, fontsize=11, loc="lower center", bbox_to_anchor=(0.5, 1.01),
+              frameon=False, handlelength=1.5, columnspacing=1.0, handletextpad=0.4)
     ax.grid(axis="y", alpha=0.3)
 
     axb = axes[1]
@@ -118,9 +119,10 @@ def figure_diurnal_box(paths, stations, base_b):
     ax.axhline(50, color="red", ls=":", lw=1, alpha=0.7, label="WHO 50 µg/m³")
     ax.set_xlabel("Hour of day")
     ax.set_ylabel("Mean PM2.5 (µg/m³)")
-    ax.set_title("A. Mean diurnal cycle")
+    ax.set_title("A. Mean diurnal cycle", pad=46)
     ax.set_xticks(range(0, 24, 2))
-    ax.legend(fontsize=10, ncol=2)
+    ax.legend(fontsize=10, ncol=4, loc="lower center", bbox_to_anchor=(0.5, 1.01),
+              frameon=False, handlelength=1.5, columnspacing=1.0, handletextpad=0.4)
     ax.grid(alpha=0.3)
 
     axb = axes[1]

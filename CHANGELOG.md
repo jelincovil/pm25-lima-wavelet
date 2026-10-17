@@ -5,6 +5,12 @@ The manuscript version is tracked separately in `paper/`.
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-10-17
+
+### Fixed
+- Panel A legends moved outside the data area for Figures 1–3, removing overlap with series and axis labels.
+- Regenerated the three paper figures with the corrected legends.
+
 ## [1.0.1] - 2026-10-17
 
 ### Changed
