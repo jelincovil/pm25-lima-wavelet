@@ -281,10 +281,11 @@ def main():
     corr = base_b.corr()
     corr.to_csv(paths["tables"] / "station_pearson_corr.csv")
 
+    root = paths["root"]
     meta = {
-        "figure_1": str(f1),
-        "figure_2_paper_file": str(paths["paper_figures"] / "figure_4.png"),
-        "figure_3_paper_file": str(paths["paper_figures"] / "figure_2.png"),
+        "figure_1": str(f1.relative_to(root)),
+        "figure_2_paper_file": str((paths["paper_figures"] / "figure_4.png").relative_to(root)),
+        "figure_3_paper_file": str((paths["paper_figures"] / "figure_2.png").relative_to(root)),
         "diurnal": diurnal_stats,
         "frac_j4_pct": {st: float(frac_j4[st]) for st in stations},
         "n_hours": int(len(base_b)),

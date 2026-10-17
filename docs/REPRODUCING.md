@@ -56,7 +56,7 @@ Order and outputs:
 | 4 | `analysis/04_sensitivity.py` | `results/sensitivity/`; `docs/SENSITIVITY.md` |
 | 5 | `analysis/05_figures_tables.py` | paper figures, Tables 1–2, `f6_paper_numbers.json`, registry update |
 
-The full run uses `N_PERM = 9,999` and seed `2026`. Runtime depends on the
+Table 2 in the manuscript is typeset from `results/inference/adaptive_results.csv`; the `results/tables/table2_scale_tests.tex` fragment is a raw generator output and is not the final table. The full run uses `N_PERM = 9,999` and seed `2026`. Runtime depends on the
 machine; the permutation step is the slowest. The scripts write to the
 committed result folders, so run the full pipeline in a scratch copy if you
 want to preserve the published artefacts.

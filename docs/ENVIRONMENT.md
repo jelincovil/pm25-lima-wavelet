@@ -14,6 +14,7 @@
 | Matplotlib | 3.11.1 |
 | seaborn | 0.13.2 |
 | PyYAML | 6.0.3 |
+| Pillow | 13.0.0 |
 | PyMuPDF | 1.28.2 |
 | pytest | 9.1.1 |
 | TeX Live | 2025 (pdfTeX 3.141592653-2.6-1.40.27) |
