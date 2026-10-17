@@ -6,6 +6,10 @@ Reproducible wavelet multiscale analysis of hourly PM2.5 at five REMCA stations 
 **Target journal:** Revista Facultad de Ingeniería, Universidad de Antioquia (REDIN)  
 **Status:** submission candidate. Code, processed data, audit trail, figures and LaTeX source are released for review and reuse.
 
+**Repository:** <https://github.com/jelincovil/pm25-lima-wavelet>  
+**Release:** <https://github.com/jelincovil/pm25-lima-wavelet/releases/tag/v1.0.0>  
+**DOI:** to be assigned via Zenodo.
+
 ## What this repository contains
 
 This is the reproducibility package for a study that asks a practical monitoring question: **at which timescales do PM2.5 stations provide distinct information?** The analysis couples a conservative preprocessing protocol with assumption-checked wavelet inference and translates the results into a scale-to-objective decision matrix.

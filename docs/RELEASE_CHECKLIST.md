@@ -1,7 +1,9 @@
 # Release checklist (GitHub + Zenodo)
 
-The repository is committed locally but not pushed. Complete these steps once
-the repository owner, visibility and data-license decision are confirmed.
+**Status 2026-10-17:** the repository is public at
+<https://github.com/jelincovil/pm25-lima-wavelet> and release `v1.0.0` exists.
+Steps 1–4 are complete; the Zenodo DOI (step 5) is pending an account/token.
+Complete the remaining checks before submission.
 
 ## 1. Create the empty GitHub repository
 
@@ -14,7 +16,7 @@ the repository owner, visibility and data-license decision are confirmed.
 ```bash
 cd pm25-lima-wavelet
 git branch -M main
-git remote add origin git@github.com:<owner>/pm25-lima-wavelet.git
+git remote add origin git@github.com:jelincovil/pm25-lima-wavelet.git
 git push -u origin main
 git push origin --tags
 ```
