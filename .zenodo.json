@@ -1,0 +1,24 @@
+{
+  "title": "pm25-lima-wavelet: Reproducible wavelet multiscale analysis of the Lima PM2.5 monitoring network",
+  "upload_type": "software",
+  "description": "Analysis code, processed data, audit trail, figures and LaTeX source for a wavelet multiscale study of hourly PM2.5 at five REMCA stations in Lima, Peru.",
+  "creators": [
+    {"name": "Aquino-Mosquera, Henry S."},
+    {"name": "Villanueva-Ramirez, Jaime E."},
+    {"name": "Huaman-Cardenas, Daniel A."},
+    {"name": "Quispe-Mendoza, Gualberto R."}
+  ],
+  "license": "MIT",
+  "keywords": [
+    "air quality",
+    "PM2.5",
+    "wavelet transform",
+    "functional ANOVA",
+    "environmental monitoring",
+    "Lima",
+    "Peru",
+    "reproducibility"
+  ],
+  "access_right": "open",
+  "language": "eng"
+}

@@ -1,0 +1,10 @@
+{
+  "n_original": 10176,
+  "N": 16384,
+  "pad_left": 3104,
+  "pad_right": 3104,
+  "wavelet": "sym7",
+  "j_descriptive": 13,
+  "j_seguro": 10,
+  "min_blocks": 12
+}

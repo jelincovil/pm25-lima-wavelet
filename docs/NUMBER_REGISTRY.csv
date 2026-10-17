@@ -1,0 +1,21 @@
+claim_id,paper_location,paper_token,value,unit,artifact,command,status,last_verified
+n_hours,Methods 2.1,"10{,}176",10176,hours,data/audit/preprocess_run_meta.json,analysis/01_preprocess_agamaz.py,verified,2026-10-17
+na_range,Abstract; Methods 2.2,2.4--6.8,2.4-6.8,percent,data/audit/resumen_deteccion_atipicos.csv,analysis/01_preprocess_agamaz.py,verified,2026-10-17
+outlier_count_range,Abstract; Methods 2.2; Table 1,69--110,69-110,hours,data/audit/resumen_deteccion_atipicos.csv,analysis/01_preprocess_agamaz.py,verified,2026-10-17
+outlier_pct_range,Abstract; Methods 2.2,0.68--1.08,0.68-1.08,percent,data/audit/resumen_deteccion_atipicos.csv,analysis/01_preprocess_agamaz.py,verified,2026-10-17
+aggressive_range,Methods 2.2,"793--1{,}342",793-1342,hours,data/audit/comparacion_metodos_outlier.csv,analysis/01_preprocess_agamaz.py,verified,2026-10-17
+aggressive_pct_range,Abstract; Methods 2.2,8--13,8-13,percent,data/audit/comparacion_metodos_outlier.csv,analysis/01_preprocess_agamaz.py,verified,2026-10-17
+pad_length,Methods 2.2; 2.3,"16{,}384",16384,points,results/inference/wavelet_meta.json,analysis/02_wavelet_diagnostics.py,verified,2026-10-17
+formal_scales,Methods 2.3; Abstract,"j=1,\ldots,9",1-9,scale,results/tables/scale_eligibility.csv,analysis/02_wavelet_diagnostics.py,verified,2026-10-17
+bonferroni_threshold,Methods 2.4,0.00556,0.005556,probability,results/inference/inference_summary.json,analysis/03_inference_adaptive.py,verified,2026-10-17
+permutation_floor,Results 3.3; Table 2,1.0\times10^{-4},0.0001,probability,results/inference/adaptive_results.csv,analysis/03_inference_adaptive.py,verified,2026-10-17
+j4_effect,Abstract; Results 3.3; Conclusions,W=0.69,0.6881,Kendall W,results/inference/adaptive_results.csv,analysis/03_inference_adaptive.py,verified,2026-10-17
+j8_p,Results 3.3; Table 2,0.0079,0.007892,p-value,results/inference/adaptive_results.csv,analysis/03_inference_adaptive.py,verified,2026-10-17
+j9_p,Results 3.3; Table 2,0.185,0.184702,p-value,results/inference/adaptive_results.csv,analysis/03_inference_adaptive.py,verified,2026-10-17
+diurnal_SJL,Abstract; Results 3.4; Conclusions,20.4,20.4413,percent,results/tables/diurnal_energy_fraction_j4_baseB.csv,analysis/05_figures_tables.py,verified,2026-10-17
+diurnal_SBJ,Abstract; Results 3.4; Conclusions,12.4,12.4027,percent,results/tables/diurnal_energy_fraction_j4_baseB.csv,analysis/05_figures_tables.py,verified,2026-10-17
+city_peak,Results 3.1,41.7,41.6876,ug/m3,results/tables/f6_paper_numbers.json,analysis/05_figures_tables.py,verified,2026-10-17
+city_trough,Results 3.1,23.8,23.8081,ug/m3,results/tables/f6_paper_numbers.json,analysis/05_figures_tables.py,verified,2026-10-17
+corr_min,Results 3.1,0.54,0.5414,Pearson r,results/tables/station_pearson_corr.csv,analysis/05_figures_tables.py,verified,2026-10-17
+corr_max,Results 3.1,0.86,0.8560,Pearson r,results/tables/station_pearson_corr.csv,analysis/05_figures_tables.py,verified,2026-10-17
+n_blocks_short,Results 3.3,19--20,19-20,blocks,results/inference/adaptive_results.csv,analysis/03_inference_adaptive.py,verified,2026-10-17

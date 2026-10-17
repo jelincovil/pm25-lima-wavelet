@@ -1,0 +1,49 @@
+{
+  "figure_1": "paper/figures/figure_1.png",
+  "figure_2_paper_file": "paper/figures/figure_4.png",
+  "figure_3_paper_file": "paper/figures/figure_2.png",
+  "diurnal": {
+    "city_peak_hour": 9,
+    "city_peak_value": 41.68763102634058,
+    "city_trough_hour": 17,
+    "city_trough_value": 23.808144174180885,
+    "station_peak_09": {
+      "SBJ": 29.662293397620502,
+      "STA": 51.6247425971559,
+      "VMT": 42.5784705915361,
+      "SJL": 54.92900919248908,
+      "SMP": 29.64363935290133
+    },
+    "station_mean_at_city_peak": {
+      "SBJ": 29.662293397620502,
+      "STA": 51.6247425971559,
+      "VMT": 42.5784705915361,
+      "SJL": 54.92900919248908,
+      "SMP": 29.64363935290133
+    }
+  },
+  "frac_j4_pct": {
+    "SBJ": 12.402672427145237,
+    "STA": 18.737342402040458,
+    "VMT": 13.293662948075614,
+    "SJL": 20.44130061177116,
+    "SMP": 17.409754819794323
+  },
+  "n_hours": 10176,
+  "outliers": {
+    "SBJ": 69,
+    "STA": 81,
+    "VMT": 88,
+    "SJL": 72,
+    "SMP": 110
+  },
+  "nas": {
+    "SBJ": 693,
+    "STA": 570,
+    "VMT": 404,
+    "SJL": 500,
+    "SMP": 244
+  },
+  "corr_min": 0.5414048237769722,
+  "corr_max": 0.8560409148429083
+}

@@ -1,0 +1,32 @@
+project: final_henry
+stations: [SBJ, STA, VMT, SJL, SMP]
+paths:
+  raw: data/raw/datos_lima_raw_mp2.5.csv
+  processed: data/processed
+  audit: data/audit
+  results: results
+wavelet:
+  family: sym7
+  pad_to: 16384
+  j_descriptive: 13
+  j_formal_max: 9
+  min_blocks: 12
+preprocess:
+  stl_period: 24
+  hampel_window: 49
+  hampel_k: 4.0
+  concordance_k: 2.5
+  max_duration_hours: 1
+  medcouple_fence: 1.5
+inference:
+  n_permutations: 9999
+  seed: 2026
+  alpha: 0.05
+  multiplicity: [bonferroni, holm]
+sensitivity:
+  arms: [imputed_only, conservative, aggressive_stl3iqr]
+  hampel_windows: [25, 49, 73]
+  hampel_ks: [3.5, 4.0, 4.5]
+figures:
+  min_width_px: 2400
+  dpi: 300

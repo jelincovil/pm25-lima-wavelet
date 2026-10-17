@@ -1,0 +1,14 @@
+# Pinned runtime for the reproducibility package.
+# Python >= 3.10 (CI uses 3.12).
+pandas==2.3.3
+numpy==2.5.1
+statsmodels==0.15.0
+PyWavelets==1.8.0
+scipy==1.18.0
+pingouin==0.7.0
+matplotlib==3.11.1
+seaborn==0.13.2
+PyYAML==6.0.3
+Pillow==13.0.0
+PyMuPDF==1.28.2
+pytest==9.1.1

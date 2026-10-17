@@ -1,0 +1,45 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Regression tests
+        run: python -m pytest -q
+      - name: Claim registry
+        run: python scripts/check_claims.py
+
+  paper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile manuscript
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: paper
+          root_file: article_REDIN.tex
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install PDF checker dependency
+        run: pip install PyMuPDF==1.28.2
+      - name: Check figure order and sizes
+        run: python scripts/check_pdf.py
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: article_REDIN
+          path: paper/article_REDIN.pdf

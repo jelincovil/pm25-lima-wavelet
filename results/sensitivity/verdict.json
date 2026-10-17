@@ -1,0 +1,30 @@
+{
+  "verdict": "robustas",
+  "detail": "El patr\u00f3n cualitativo principal (heterogeneidad fuerte en j=1\u20137; sin evidencia en j=9) se mantiene en A, B y C. Las conclusiones del paper no dependen cr\u00edticamente del tratamiento de at\u00edpicos.",
+  "patterns": {
+    "A_imputed_only": {
+      "j1_7_all_sig": true,
+      "j8_sig": false,
+      "j9_sig": false,
+      "n_sig": 7
+    },
+    "B_conservative": {
+      "j1_7_all_sig": true,
+      "j8_sig": false,
+      "j9_sig": false,
+      "n_sig": 7
+    },
+    "C_aggressive_stl3iqr": {
+      "j1_7_all_sig": true,
+      "j8_sig": true,
+      "j9_sig": false,
+      "n_sig": 8
+    }
+  },
+  "agreement": {
+    "A_imputed_only_vs_B_conservative": 1.0,
+    "A_imputed_only_vs_C_aggressive_stl3iqr": 0.8888888888888888,
+    "B_conservative_vs_C_aggressive_stl3iqr": 0.8888888888888888
+  },
+  "n_perm_ac": 9999
+}

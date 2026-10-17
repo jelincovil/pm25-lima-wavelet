@@ -1,0 +1,10 @@
+scale_j,A_imputed_only,B_conservative,C_aggressive_stl3iqr
+1,Permutacao-blocos,Permutacao-blocos,Permutacao-blocos
+2,Permutacao-blocos,Permutacao-blocos,Permutacao-blocos
+3,Permutacao-blocos,Permutacao-blocos,Permutacao-blocos
+4,Permutacao-blocos,Permutacao-blocos,Permutacao-blocos
+5,ANOVA-RM,ANOVA-RM,Friedman
+6,Permutacao-blocos,Permutacao-blocos,ANOVA-RM
+7,Permutacao-blocos,Permutacao-blocos,ANOVA-RM
+8,Friedman,Friedman,Friedman
+9,ANOVA-RM,Friedman,Friedman

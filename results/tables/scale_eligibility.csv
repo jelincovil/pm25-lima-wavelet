@@ -1,0 +1,14 @@
+scale_j,period_low_h,period_high_h,n_coefficients_total,n_coefficients_central,within_pywt_max_level,enough_central_coefficients,eligible_for_inference
+1,2,4,8192,5088,True,True,True
+2,4,8,4096,2544,True,True,True
+3,8,16,2048,1272,True,True,True
+4,16,32,1024,636,True,True,True
+5,32,64,512,318,True,True,True
+6,64,128,256,159,True,True,True
+7,128,256,128,80,True,True,True
+8,256,512,64,40,True,True,True
+9,512,1024,32,20,True,True,True
+10,1024,2048,16,10,True,False,False
+11,2048,4096,8,4,False,False,False
+12,4096,8192,4,2,False,False,False
+13,8192,16384,2,2,False,False,False

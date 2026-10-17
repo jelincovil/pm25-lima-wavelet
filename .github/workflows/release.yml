@@ -1,0 +1,40 @@
+name: release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile manuscript
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: paper
+          root_file: article_REDIN.tex
+      - name: Build release archive
+        run: |
+          mkdir -p release
+          cp paper/article_REDIN.pdf release/
+          cp paper/article_REDIN.tex release/
+          cp -r paper/figures release/figures
+          cp CITATION.cff LICENSE LICENSE-PAPER DATA_LICENSE.md release/
+          cp docs/NUMBER_REGISTRY.csv docs/CLAIMS_EVIDENCE.md release/
+          cd release && zip -r ../pm25-lima-wavelet-release.zip .
+      - name: Upload release archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: pm25-lima-wavelet-release
+          path: pm25-lima-wavelet-release.zip
+      - name: Create GitHub release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: pm25-lima-wavelet-release.zip

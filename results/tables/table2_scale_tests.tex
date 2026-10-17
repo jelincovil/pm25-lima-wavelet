@@ -1,0 +1,21 @@
+\begin{table}[ht]
+\centering
+\caption{Scale-wise inter-station tests after assumption checking (Base B). Bonferroni over $M=9$ scales.}
+\label{tab:tests}
+\small
+\begin{tabular}{rrrlrrrl}
+\toprule
+$j$ & Period (h) & Method & Stat. & $p$ & $p_{\mathrm{Bonf}}$ & Sig. & Effect \\
+\midrule
+1 & 2--4 & Permutacao-blocos & 46.189 & 1.00e-04 & 9.00e-04 & yes & 0.608 \\
+2 & 4--8 & Permutacao-blocos & 46.779 & 1.00e-04 & 9.00e-04 & yes & 0.616 \\
+3 & 8--16 & Permutacao-blocos & 49.137 & 1.00e-04 & 9.00e-04 & yes & 0.647 \\
+4 & 16--32 & Permutacao-blocos & 52.295 & 1.00e-04 & 9.00e-04 & yes & 0.688 \\
+5 & 32--64 & ANOVA-RM & 21.186 & 1.41e-11 & 1.27e-10 & yes & 0.208 \\
+6 & 64--128 & Permutacao-blocos & 26.568 & 1.00e-04 & 9.00e-04 & yes & 0.350 \\
+7 & 128--256 & Permutacao-blocos & 35.720 & 1.00e-04 & 9.00e-04 & yes & 0.447 \\
+8 & 256--512 & Friedman & 13.820 & 0.0079 & 0.0710 & no & 0.086 \\
+9 & 512--1024 & Friedman & 6.200 & 0.1847 & 1.0000 & no & 0.077 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,41 @@
+{
+  "stations": [
+    "SBJ",
+    "STA",
+    "VMT",
+    "SJL",
+    "SMP"
+  ],
+  "n_hours": 10176,
+  "n_start": "2022-01-01 00:00:00",
+  "n_end": "2023-02-28 23:00:00",
+  "n_ausentes": {
+    "SBJ": 693,
+    "STA": 570,
+    "VMT": 404,
+    "SJL": 500,
+    "SMP": 244
+  },
+  "candidatos_finais": {
+    "SBJ": 69,
+    "STA": 81,
+    "VMT": 88,
+    "SJL": 72,
+    "SMP": 110
+  },
+  "stl3iqr": {
+    "SBJ": 1342,
+    "STA": 1152,
+    "VMT": 793,
+    "SJL": 895,
+    "SMP": 1118
+  },
+  "config_preprocess": {
+    "stl_period": 24,
+    "hampel_window": 49,
+    "hampel_k": 4.0,
+    "concordance_k": 2.5,
+    "max_duration_hours": 1,
+    "medcouple_fence": 1.5
+  }
+}
