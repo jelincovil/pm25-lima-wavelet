@@ -87,7 +87,7 @@ El manuscrito era científicamente sólido, pero presentaba defectos de producto
 ### 2.7 Figuras
 
 - **Figura 1 regenerada** con etiquetas “Missing values imputed” y “Values replaced (conservative)”, título de panel “Values modified per station”, mayor tamaño de fuente y formato PNG optimizado (2400 px, 285 KB).
-- **Figura 2 regenerada** con fuentes mayores y leyenda WHO más clara (2400 px, 211 KB).
+- **Figura 2 regenerada** con fuentes mayores y leyenda WHO más clara (2400 px, 206 KB).
 - **Figura 3 regenerada** con fuentes mayores y leyenda **“Block permutation”** (antes “Permutacao-blocos”), 2400 px, 238 KB.
 - Las tres figuras cumplen ≤500 KB y 8.5–17 cm.
 - **Leyendas de panel A movidas fuera del área de datos**: se corrigió la superposición con las series en Fig. 2A y Fig. 3A (y se aplicó el mismo criterio a Fig. 1A).
@@ -116,7 +116,7 @@ El manuscrito era científicamente sólido, pero presentaba defectos de producto
 |---|---|
 | PDF | 12 pp |
 | Figuras | pp. 6, 7 y 8, antes de la bibliografía |
-| Tamaño de figuras | 285 / 238 / 211 KB |
+| Tamaño de figuras | 285 / 238 / 206 KB |
 | Abstract EN | 228 palabras |
 | Referencias | 21, todas citadas |
 | Citas indefinidas | 0 |
